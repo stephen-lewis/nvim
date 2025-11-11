@@ -14,6 +14,7 @@ return {
 			sh = { "shfmt" },
 			c = { "clang-format" },
 			cpp = { "clang-format" },
+			["*"] = { "prettier" },
 		},
 		formatters = {
 			clang_format = {
@@ -21,6 +22,12 @@ return {
 			},
 			shfmt = {
 				prepend_args = { "-i", "4" },
+			},
+			prettier = {
+				config_command = "--config",
+				config_names = {
+					".editorconfig",
+				},
 			},
 		},
 	},

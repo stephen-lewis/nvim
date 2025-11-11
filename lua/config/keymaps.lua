@@ -38,13 +38,13 @@ k.set("v", ">", ">gv", opts)
 -- Buffers
 k.set("n", "<Tab>", "<cmd>bnext<CR>", opts) -- next file
 k.set("n", "<S-Tab>", "<cmd>bprevious<CR>", opts) -- prev file
-k.set("n", "<leader>n", "<cmd>enew<CR>", opts) -- new file
-k.set("n", "<leader>c", "<cmd>Bdelete!<CR>", opts) -- close file
+k.set("n", "<leader>n", "<cmd>enew<CR>", { desc = 'New file', noremap = true, silent = true }) -- new file
+k.set("n", "<leader>x", "<cmd>Bdelete!<CR>", { desc = 'Close file', noremap = true, silent = true }) -- close file
 
 -- Windows
-k.set("n", "<leader>v", "<C-w>v", opts) -- new split vertically
-k.set("n", "<leader>h", "<C-w>s", opts) -- new split horizontally
-k.set("n", "<leader>wc", "<cmd>close<CR>", opts) -- close window
+k.set("n", "<leader>v", "<C-w>v", { desc = 'New vertical split', noremap = true, silent = true }) -- new split vertically
+k.set("n", "<leader>h", "<C-w>s", { desc = 'New horizontal split', noremap = true, silent = true }) -- new split horizontally
+k.set("n", "<leader>wx", "<cmd>close<CR>", { desc = 'Close window/split', noremap = true, silent = true }) -- close window
 
 -- Tabs
 k.set("n", "<leader>tn", "<cmd>tabnew<CR>", opts) -- new tab
@@ -53,7 +53,7 @@ k.set("n", "<leader>tl", "<cmd>tabn<CR>", opts) -- new tab
 k.set("n", "<leader>th", "<cmd>tabp<CR>", opts) -- new tab
 
 -- Misc
-k.set("n", "<leader>w", "<cmd>noautocmd w <CR>", opts)
+k.set("n", "<leader>w", "<cmd>noautocmd w <CR>", { desc = 'Write without autocmds', noremap = true, silent = true })
 
 -- Muscle memory issues.
 k.set({ "i", "n", "v" }, "<C-s>", "<cmd> w <CR>", opts)
