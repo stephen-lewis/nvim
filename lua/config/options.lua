@@ -6,6 +6,8 @@ local g = vim.g
 
 -- Providers
 g.loaded_perl_provider = 0 -- I don't use perl
+g.loaded_ruby_provider = 0 -- I don't use ruby
+g.loaded_python3_provider = 0 -- Turn off python
 
 -- Leaders
 g.mapleader = " "
